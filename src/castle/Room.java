@@ -1,29 +1,20 @@
 package castle;
 
+import java.util.HashMap;
+
 public class Room {
     public String description;
-    public Room northExit;
-    public Room southExit;
-    public Room eastExit;
-    public Room westExit;
+    private HashMap<String, Room> exits = new HashMap<String, Room>();
 
     public Room(String description) 
     {
         this.description = description;
     }
 
-    public void setExits(Room north, Room east, Room south, Room west) 
-    {
-        if(north != null)
-            northExit = north;
-        if(east != null)
-            eastExit = east;
-        if(south != null)
-            southExit = south;
-        if(west != null)
-            westExit = west;
+    public void setExit(String direction, Room room){
+    		exits.put(direction, room);
     }
-
+    
     @Override
     public String toString()
     {
@@ -32,31 +23,14 @@ public class Room {
     
     public String getExitDesc(){
     		StringBuffer result = new StringBuffer();
-    		if( northExit != null )
-    			result.append("north ");
-    		if( eastExit != null )
-    			result.append("east ");
-    		if( southExit != null )
-    			result.append("south ");
-    		if( westExit != null )
-    			result.append("west ");
+    		for( String direction : exits.keySet() ){
+    			result.append(direction).append(" ");
+    		}
     		return result.toString();
     }
     
     public Room getExit(String direction){
-    		Room exit = null;
-    		if(direction.equals("north")) {
-            exit = northExit;
-        }
-        if(equals("east")) {
-            exit = eastExit;
-        }
-        if(equals("south")) {
-            exit = southExit;
-        }
-        if(direction.equals("west")) {
-            exit = westExit;
-        }
-    		return exit;
+    		return exits.get(direction); 
+    		
     }
 }
