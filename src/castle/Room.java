@@ -29,4 +29,34 @@ public class Room {
     {
         return description;
     }
+    
+    public String getExitDesc(){
+    		StringBuffer result = new StringBuffer();
+    		if( northExit != null )
+    			result.append("north ");
+    		if( eastExit != null )
+    			result.append("east ");
+    		if( southExit != null )
+    			result.append("south ");
+    		if( westExit != null )
+    			result.append("west ");
+    		return result.toString();
+    }
+    
+    public Room getExit(String direction){
+    		Room exit = null;
+    		if(direction.equals("north")) {
+            exit = northExit;
+        }
+        if(equals("east")) {
+            exit = eastExit;
+        }
+        if(equals("south")) {
+            exit = southExit;
+        }
+        if(direction.equals("west")) {
+            exit = westExit;
+        }
+    		return exit;
+    }
 }
