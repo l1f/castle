@@ -83,24 +83,24 @@ public class Game {
 		// 设置地图字符串
 		StringBuffer sb = new StringBuffer();
 		sb.append("   +-----+-----+-----+               ^ top          \n")
-				.append("   |     |     |     |               |              \n")
-				.append("   |  B     C     D  |               |              \n")
-				.append("   |     |     |     |               |              \n")
-				.append("   +-- ----------- --+               |              \n")
-				.append("   |     |     |     |  left         |       right  \n")
-				.append("   |  A     O     E  |     <---------x---------->   \n")
-				.append("   |     |     |     |               |              \n")
-				.append("   +-- ----------- --+               |              \n")
-				.append("   +-+   |     |     |               |              \n")
-				.append("   |.|H     G     F  |               |              \n")
-				.append("   +-+   |     |     |               |              \n")
-				.append("   +-----+-----+-----+               v bottom       \n")
-				.append("                                                    \n")
-				.append("   +-----------+                                    \n")
-				.append("   +-+         |              +-+       +-+         \n")
-				.append("   |x|  loft   |              |x| down  |.| up      \n")
-				.append("   +-+         |              +-+       +-+         \n")
-				.append("   +-----------+                                    \n");
+			.append("   |     |     |     |               |              \n")
+			.append("   |  B     C     D  |               |              \n")
+			.append("   |     |     |     |               |              \n")
+			.append("   +-- ----------- --+               |              \n")
+			.append("   |     |     |     |  left         |       right  \n")
+			.append("   |  A     O     E  |     <---------x---------->   \n")
+			.append("   |     |     |     |               |              \n")
+			.append("   +-- ----------- --+               |              \n")
+			.append("   +-+   |     |     |               |              \n")
+			.append("   |.|H     G     F  |               |              \n")
+			.append("   +-+   |     |     |               |              \n")
+			.append("   +-----+-----+-----+               v bottom       \n")
+			.append("                                                    \n")
+			.append("   +-----------+                                    \n")
+			.append("   +-+         |              +-+       +-+         \n")
+			.append("   |x|  loft   |              |x| down  |.| up      \n")
+			.append("   +-+         |              +-+       +-+         \n")
+			.append("   +-----------+                                    \n");
 		this.setMapStr(sb.toString());
 	}
 

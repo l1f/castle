@@ -7,8 +7,8 @@ public class HandlerHelp extends Handler {
 
 	@Override
 	public void doCmd(String arg) {
-		System.out.print("迷路了吗？你可以做的命令有：go bye help");
-		System.out.println("如：\tgo left");
+		System.out.print("迷路了吗？你可以做的命令有：go bye help\t");
+		System.out.println("如： go left");
 		if (game.getMapStr() != "") {
 			System.out.println("彩蛋:输入\"help map\",查看上帝视角全景地图");
 
